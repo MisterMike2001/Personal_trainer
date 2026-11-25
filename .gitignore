@@ -1,0 +1,60 @@
+# Python / FastAPI
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# React Native / JavaScript
+node_modules/
+.expo/
+.expo-shared/
+.metro-health-check*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Build output
+dist/
+build/
+web-build/
+coverage/
+*.tsbuildinfo
+
+# Android
+.gradle/
+.cxx/
+local.properties
+*.apk
+*.aab
+*.keystore
+*.jks
+!debug.keystore
+
+# iOS
+Pods/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+*.ipa
+*.dSYM/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Local logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
