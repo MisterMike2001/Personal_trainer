@@ -1,12 +1,12 @@
 
 
 from datetime import datetime, timedelta, timezone
-from schemas.refresh_session_schema import RefreshSessionCreateSchema, RefreshSessionSchema
-from repositories.refresh_session_repo import RefreshSessionRepo
+from schemas.auth.refresh_session_schema import RefreshSessionCreateSchema, RefreshSessionSchema
+from repositories.auth.refresh_session_repo import RefreshSessionRepo
 from core.tokens import create_access_token, create_refresh_token, hash_refresh_token
-from repositories.user_repo import UserRepository
+from repositories.auth.user_repo import UserRepository
 import bcrypt
-from schemas.users_schema import UserLogin
+from schemas.auth.users_schema import UserLogin
 
 
 class AuthRepository:

@@ -2,7 +2,7 @@
 
 
 from models.auth.refresh_session_model import RefreshSession
-from schemas.refresh_session_schema import RefreshSessionSchema, RefreshSessionCreateSchema
+from schemas.auth.refresh_session_schema import RefreshSessionSchema, RefreshSessionCreateSchema
 
 
 class RefreshSessionRepo:

@@ -1,7 +1,7 @@
 from core.database_connection import get_db
-from schemas.users_schema import RefreshRequest, TokenResponse, UserLogin
+from schemas.auth.users_schema import RefreshRequest, TokenResponse, UserLogin
 from fastapi import APIRouter, HTTPException
-from repositories.auth_repo import AuthRepository
+from repositories.auth.auth_repo import AuthRepository
 
 router = APIRouter()
 

@@ -1,5 +1,5 @@
 
-from schemas.users_schema import UserCreate, UserUpdate
+from schemas.auth.users_schema import UserCreate, UserUpdate
 from models.auth.users_model import User
 
 
@@ -14,11 +14,13 @@ class UserRepository:
         return self.db.query(User).filter(User.id ==user_id).first()
 
     def add_user(self, user: UserCreate):
-        self.db.add(user)
+        
+        new_user = User(**user.model_dump())
+        self.db.add(new_user)
         self.db.commit()
-        self.db.refresh(user)
+        self.db.refresh(new_user)
 
-        return user
+        return new_user
     
     def update_user(self, user: UserUpdate):
         old_user = self.get_user_by_id(user.id)
