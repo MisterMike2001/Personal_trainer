@@ -2,7 +2,8 @@ import os
 
 from pydantic_settings import BaseSettings, SettingsConfigDict
 from sqlalchemy import create_engine
-from sqlalchemy.orm import DeclarativeBase, sessionmaker
+from sqlalchemy.orm import sessionmaker
+from models.base import Base
 
 
 
@@ -24,9 +25,6 @@ engine = create_engine(
 
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
-
-class Base(DeclarativeBase):
-    pass
 
 def get_db():
     with SessionLocal() as db:

@@ -1,14 +1,12 @@
-from sqlalchemy import Column, Integer, String, Boolean, DateTime, Identity, func
-from sqlalchemy.orm import declarative_base
+from sqlalchemy import Column, String, Boolean, DateTime, func
 
-Base = declarative_base()
+from models.base import Base, IDMixin
 
 
-class User(Base):
+class User(Base, IDMixin):
     __tablename__ = "users"
     __table_args__ = {"schema": "auth"}
 
-    id = Column(Integer, Identity(always=True), primary_key=True, index=True)
     name = Column(String(100), nullable=False)
     surname = Column(String(100), nullable=False)
     email = Column(String(255), unique=True, index=True, nullable=False)

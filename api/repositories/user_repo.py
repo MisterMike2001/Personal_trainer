@@ -1,6 +1,6 @@
 
 from schemas.users_schema import UserCreate, UserUpdate
-from models.users_model import User
+from models.auth.users_model import User
 
 
 class UserRepository:
